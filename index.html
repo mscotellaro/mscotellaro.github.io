@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mario Scotellaro — Sourcing &amp; Production Specialist, Knit &amp; Woven</title>
+<meta name="description" content="Independent apparel sourcing specialist. Circular knit, fully-fashioned knitwear and woven from a vetted factory base across Bangladesh, India, Pakistan, Sri Lanka and Turkey.">
+<style>
+  :root {
+    --crimson: #A6192E;
+    --ink: #1c1c1e;
+    --grey: #55555c;
+    --line: #e6e2dd;
+    --paper: #faf8f5;
+    --white: #ffffff;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: "Segoe UI", -apple-system, "Helvetica Neue", Arial, sans-serif;
+    color: var(--ink);
+    background: var(--white);
+    line-height: 1.65;
+    font-size: 17px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 0 24px; }
+
+  /* ---------- Header ---------- */
+  header {
+    border-top: 4px solid var(--crimson);
+    padding: 22px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  header .wrap { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; }
+  .logo { font-weight: 700; letter-spacing: 0.02em; font-size: 1.05rem; }
+  .logo span { color: var(--crimson); }
+  nav a {
+    color: var(--grey); text-decoration: none; font-size: 0.9rem;
+    margin-left: 22px; letter-spacing: 0.02em;
+  }
+  nav a:hover { color: var(--crimson); }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    padding: 110px 0 90px;
+    background:
+      linear-gradient(rgba(18, 16, 17, 0.62), rgba(18, 16, 17, 0.72)),
+      url("img/factory-floor.jpg") center 35% / cover no-repeat;
+    color: #fff;
+  }
+  .hero .kicker {
+    color: #e9b3bc; font-size: 0.82rem; font-weight: 600;
+    letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 18px;
+  }
+  .hero h1 {
+    font-size: clamp(1.9rem, 4.5vw, 3rem);
+    line-height: 1.18; font-weight: 700; letter-spacing: -0.01em;
+    max-width: 760px;
+  }
+  .hero p.sub {
+    margin-top: 26px; font-size: 1.12rem; color: #d8d4d0; max-width: 660px;
+  }
+  .hero .cta {
+    display: inline-block; margin-top: 36px;
+    background: var(--crimson); color: #fff; text-decoration: none;
+    padding: 13px 30px; font-weight: 600; font-size: 0.95rem;
+    letter-spacing: 0.03em; border-radius: 3px;
+  }
+  .hero .cta:hover { background: #8c1527; }
+
+  /* ---------- Numbers ---------- */
+  .numbers { background: var(--paper); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 44px 0; }
+  .numbers .wrap {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px;
+  }
+  .num b { display: block; font-size: 1.9rem; font-weight: 700; color: var(--crimson); line-height: 1.1; }
+  .num span { font-size: 0.88rem; color: var(--grey); display: block; margin-top: 6px; }
+
+  /* ---------- Sections ---------- */
+  section { padding: 72px 0; }
+  section + section { border-top: 1px solid var(--line); }
+  h2 {
+    font-size: 0.85rem; font-weight: 600; color: var(--crimson);
+    letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 26px;
+  }
+  .lede { font-size: 1.28rem; line-height: 1.55; max-width: 780px; font-weight: 400; }
+  .body-copy { margin-top: 20px; color: var(--grey); max-width: 720px; }
+
+  /* ---------- About ---------- */
+  .about-grid {
+    display: grid; grid-template-columns: 1fr 340px; gap: 56px; align-items: start;
+  }
+  .about-photo img {
+    width: 100%; height: auto; display: block; border-radius: 3px;
+    border-bottom: 4px solid var(--crimson);
+  }
+  .about-photo figcaption {
+    font-size: 0.82rem; color: var(--grey); margin-top: 10px; letter-spacing: 0.02em;
+  }
+
+  /* ---------- Cards ---------- */
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 10px; }
+  .card {
+    border: 1px solid var(--line); border-top: 3px solid var(--crimson);
+    background: var(--white); border-radius: 2px; overflow: hidden;
+  }
+  .card img {
+    width: 100%; height: 190px; object-fit: cover; display: block;
+    filter: saturate(0.85);
+  }
+  .card .card-body { padding: 22px 24px 26px; }
+  .card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 10px; }
+  .card p { font-size: 0.93rem; color: var(--grey); }
+
+  /* ---------- Photo band ---------- */
+  .band { padding: 0; }
+  .band img { width: 100%; height: 280px; object-fit: cover; display: block; }
+
+  /* ---------- Services ---------- */
+  .services { display: grid; grid-template-columns: 1fr 1fr; gap: 0 48px; margin-top: 6px; }
+  .service { padding: 20px 0; border-bottom: 1px solid var(--line); }
+  .service b { display: block; font-size: 1rem; margin-bottom: 4px; }
+  .service span { font-size: 0.92rem; color: var(--grey); }
+
+  /* ---------- Countries ---------- */
+  .countries { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 6px; }
+  .country {
+    border: 1px solid var(--line); padding: 10px 20px; font-size: 0.95rem;
+    border-radius: 2px; background: var(--paper);
+  }
+  .country b { color: var(--ink); }
+
+  /* ---------- Contact ---------- */
+  .contact { background: var(--ink); color: #f0eeeb; }
+  .contact h2 { color: #d98a96; }
+  .contact .lede { color: #fff; }
+  .contact-lines { margin-top: 34px; display: flex; flex-direction: column; gap: 10px; font-size: 1.05rem; }
+  .contact-lines a { color: #fff; text-decoration: none; border-bottom: 1px solid var(--crimson); padding-bottom: 1px; }
+  .contact-lines a:hover { color: #d98a96; }
+  .contact-lines .label { color: #9a9aa2; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; margin-right: 12px; }
+
+  footer { background: var(--ink); color: #8a8a92; font-size: 0.82rem; padding: 26px 0 40px; border-top: 1px solid #33333a; }
+
+  @media (max-width: 720px) {
+    .numbers .wrap { grid-template-columns: repeat(2, 1fr); }
+    .about-grid { grid-template-columns: 1fr; gap: 32px; }
+    .about-photo { max-width: 380px; }
+    .cards { grid-template-columns: 1fr; }
+    .services { grid-template-columns: 1fr; }
+    .hero { padding: 60px 0 50px; }
+    section { padding: 54px 0; }
+    nav a { margin-left: 14px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="logo">MARIO <span>SCOTELLARO</span></div>
+    <nav>
+      <a href="#expertise">Expertise</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="kicker">Independent Sourcing &amp; Production Specialist — Knit &amp; Woven</div>
+    <h1>A ground-level buying office, in one person.</h1>
+    <p class="sub">I identify the right factory for your product and manage sampling, price negotiation, quality control and order follow-up through to delivery — across Bangladesh, India, Pakistan, Sri Lanka and Turkey.</p>
+    <a class="cta" href="#contact">Get in touch</a>
+  </div>
+</div>
+
+<div class="numbers">
+  <div class="wrap">
+    <div class="num"><b>21+</b><span>years in apparel sourcing &amp; operations</span></div>
+    <div class="num"><b>~20M</b><span>garments per year managed at peak</span></div>
+    <div class="num"><b>14</b><span>years based in Dhaka, Bangladesh</span></div>
+    <div class="num"><b>3–4%</b><span>late-delivery rate achieved, from double digits</span></div>
+  </div>
+</div>
+
+<section id="about">
+  <div class="wrap">
+    <h2>Who I am</h2>
+    <div class="about-grid">
+      <div>
+        <p class="lede">Until June 2026 I was Head of Global Sourcing &amp; Operations at Original Marines, an Italian retailer producing around 20 million garments a year across South Asia and Turkey.</p>
+        <p class="body-copy">I built and ran the company's liaison office in Dhaka — a team of 27 handling vendor management, merchandising, quality assurance and compliance — after fourteen years living and working on the ground in Bangladesh. Today I bring that same operational structure to brands as an independent specialist: the standards and discipline of a large buying organisation, with the speed of a single point of contact.</p>
+      </div>
+      <figure class="about-photo">
+        <img src="img/mario.jpg" alt="Mario Scotellaro" width="900" height="743">
+        <figcaption>Mario Scotellaro</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="expertise">
+  <div class="wrap">
+    <h2>Product expertise</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="img/circular-knit.jpg" alt="Circular knitting machine">
+        <div class="card-body">
+          <h3>Circular knit</h3>
+          <p>Jersey, t-shirts, polos, fleece, sweatshirts, basics and loungewear — high-volume programmes as well as mid-sized runs.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="img/flat-knit.jpg" alt="Ribbed sweaters in a range of colours">
+        <div class="card-body">
+          <h3>Fully-fashioned knitwear</h3>
+          <p>Sweaters, pullovers and cardigans in cotton, blends and fine gauges, from a vetted flat-knit factory base.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="img/denim-laser.jpg" alt="Denim finishing treatment">
+        <div class="card-body">
+          <h3>Woven</h3>
+          <p>Shirts, dresses, trousers and outerwear — denim and non-denim — with full development and wash capabilities.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <h2>What I do for a brand</h2>
+    <div class="services">
+      <div class="service"><b>Factory selection</b><span>Matching your product, price point and volumes to the right factory — not the other way around.</span></div>
+      <div class="service"><b>Sampling &amp; development</b><span>From first proto to sales-sample sets, with realistic calendars and follow-through.</span></div>
+      <div class="service"><b>Price negotiation</b><span>Costings built from fabric, trims and minutes — negotiated with the leverage of someone who knows the numbers.</span></div>
+      <div class="service"><b>Quality control</b><span>Inline and final inspections to AQL 2.5, with root-cause follow-up rather than box-ticking.</span></div>
+      <div class="service"><b>Order follow-up</b><span>Production monitoring from fabric booking to vessel, so problems surface early enough to fix.</span></div>
+      <div class="service"><b>Compliance</b><span>Factories screened on social and ethical standards, with documentation kept current.</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="band">
+  <img src="img/garments-rail.jpg" alt="Garments on a sample rail">
+</div>
+
+<section id="countries">
+  <div class="wrap">
+    <h2>Where I work</h2>
+    <p class="lede">A supplier base built over two decades, matched to each brand's segment and price point.</p>
+    <div class="countries" style="margin-top:30px">
+      <div class="country"><b>Bangladesh</b></div>
+      <div class="country"><b>India</b></div>
+      <div class="country"><b>Pakistan</b></div>
+      <div class="country"><b>Sri Lanka</b></div>
+      <div class="country"><b>Turkey</b></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2>Contact</h2>
+    <p class="lede">If there's a product where you'd like to explore alternative sourcing, it's fifteen minutes of a call well spent.</p>
+    <div class="contact-lines">
+      <div><span class="label">Email</span><a href="mailto:ma.scotellaro@pm.me">ma.scotellaro@pm.me</a></div>
+      <div><span class="label">Phone</span><a href="tel:+393483807782">+39 348 380 7782</a></div>
+      <div><span class="label">LinkedIn</span><a href="https://www.linkedin.com/in/mario-scotellaro-6200b21b4" target="_blank" rel="noopener">linkedin.com/in/mario-scotellaro</a></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Mario Scotellaro — Sourcing &amp; Production Specialist, Knit &amp; Woven. Based in Italy, working across South Asia and Turkey.</div>
+</footer>
+
+</body>
+</html>
