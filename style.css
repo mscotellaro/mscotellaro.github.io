@@ -121,6 +121,10 @@ h2 {
 .article-cards { grid-template-columns: repeat(2, 1fr); }
 .card.article-card { text-decoration: none; color: inherit; display: block; transition: border-color 0.15s; }
 .card.article-card:hover { border-color: var(--crimson); }
+.card.article-card img {
+  height: auto; aspect-ratio: 1 / 1; object-fit: contain;
+  background: var(--paper); filter: none;
+}
 .article-meta {
   font-size: 0.82rem; color: var(--grey); letter-spacing: 0.04em;
   text-transform: uppercase; margin-bottom: 10px;
@@ -128,7 +132,11 @@ h2 {
 .card.article-card h3 { font-size: 1.05rem; margin-bottom: 0; }
 
 /* ---------- Article page (detail) ---------- */
-.article-hero img { width: 100%; height: 340px; object-fit: cover; display: block; }
+.article-cover { max-width: 380px; margin: 0 auto 40px; }
+.article-cover img {
+  width: 100%; height: auto; display: block; border-radius: 3px;
+  border: 1px solid var(--line);
+}
 .back-link {
   display: inline-block; margin-bottom: 24px; font-size: 0.9rem;
   color: var(--grey); text-decoration: none; letter-spacing: 0.02em;
