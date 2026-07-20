@@ -5,167 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mario Scotellaro — Sourcing &amp; Production Specialist, Knit &amp; Woven</title>
 <meta name="description" content="Independent apparel sourcing specialist. Circular knit, fully-fashioned knitwear and woven from a vetted factory base across Bangladesh, India, Pakistan, Sri Lanka and Turkey.">
-<style>
-  :root {
-    --crimson: #A6192E;
-    --ink: #1c1c1e;
-    --grey: #55555c;
-    --line: #e6e2dd;
-    --paper: #faf8f5;
-    --white: #ffffff;
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    font-family: "Segoe UI", -apple-system, "Helvetica Neue", Arial, sans-serif;
-    color: var(--ink);
-    background: var(--white);
-    line-height: 1.65;
-    font-size: 17px;
-    -webkit-font-smoothing: antialiased;
-  }
-  .wrap { max-width: 920px; margin: 0 auto; padding: 0 24px; }
-
-  /* ---------- Header ---------- */
-  header {
-    border-top: 4px solid var(--crimson);
-    padding: 22px 0;
-    border-bottom: 1px solid var(--line);
-  }
-  header .wrap { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; }
-  .logo { font-weight: 700; letter-spacing: 0.02em; font-size: 1.05rem; }
-  .logo span { color: var(--crimson); }
-  nav a {
-    color: var(--grey); text-decoration: none; font-size: 0.9rem;
-    margin-left: 22px; letter-spacing: 0.02em;
-  }
-  nav a:hover { color: var(--crimson); }
-
-  /* ---------- Hero ---------- */
-  .hero {
-    padding: 110px 0 90px;
-    background:
-      linear-gradient(rgba(18, 16, 17, 0.62), rgba(18, 16, 17, 0.72)),
-      url("img/factory-floor.jpg") center 35% / cover no-repeat;
-    color: #fff;
-  }
-  .hero .kicker {
-    color: #e9b3bc; font-size: 0.82rem; font-weight: 600;
-    letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 18px;
-  }
-  .hero h1 {
-    font-size: clamp(1.9rem, 4.5vw, 3rem);
-    line-height: 1.18; font-weight: 700; letter-spacing: -0.01em;
-    max-width: 760px;
-  }
-  .hero p.sub {
-    margin-top: 26px; font-size: 1.12rem; color: #d8d4d0; max-width: 660px;
-  }
-  .hero .cta {
-    display: inline-block; margin-top: 36px;
-    background: var(--crimson); color: #fff; text-decoration: none;
-    padding: 13px 30px; font-weight: 600; font-size: 0.95rem;
-    letter-spacing: 0.03em; border-radius: 3px;
-  }
-  .hero .cta:hover { background: #8c1527; }
-
-  /* ---------- Numbers ---------- */
-  .numbers { background: var(--paper); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 44px 0; }
-  .numbers .wrap {
-    display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px;
-  }
-  .num b { display: block; font-size: 1.9rem; font-weight: 700; color: var(--crimson); line-height: 1.1; }
-  .num span { font-size: 0.88rem; color: var(--grey); display: block; margin-top: 6px; }
-
-  /* ---------- Sections ---------- */
-  section { padding: 72px 0; }
-  section + section { border-top: 1px solid var(--line); }
-  h2 {
-    font-size: 0.85rem; font-weight: 600; color: var(--crimson);
-    letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 26px;
-  }
-  .lede { font-size: 1.28rem; line-height: 1.55; max-width: 780px; font-weight: 400; }
-  .body-copy { margin-top: 20px; color: var(--grey); max-width: 720px; }
-
-  /* ---------- About ---------- */
-  .about-grid {
-    display: grid; grid-template-columns: 1fr 340px; gap: 56px; align-items: start;
-  }
-  .about-photo img {
-    width: 100%; height: auto; display: block; border-radius: 3px;
-    border-bottom: 4px solid var(--crimson);
-  }
-  .about-photo figcaption {
-    font-size: 0.82rem; color: var(--grey); margin-top: 10px; letter-spacing: 0.02em;
-  }
-
-  /* ---------- Cards ---------- */
-  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 10px; }
-  .card {
-    border: 1px solid var(--line); border-top: 3px solid var(--crimson);
-    background: var(--white); border-radius: 2px; overflow: hidden;
-  }
-  .card img {
-    width: 100%; height: 190px; object-fit: cover; display: block;
-    filter: saturate(0.85);
-  }
-  .card .card-body { padding: 22px 24px 26px; }
-  .card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 10px; }
-  .card p { font-size: 0.93rem; color: var(--grey); }
-
-  /* ---------- Photo band ---------- */
-  .band { padding: 0; }
-  .band img { width: 100%; height: 280px; object-fit: cover; display: block; }
-
-  /* ---------- Services ---------- */
-  .services { display: grid; grid-template-columns: 1fr 1fr; gap: 0 48px; margin-top: 6px; }
-  .service { padding: 20px 0; border-bottom: 1px solid var(--line); }
-  .service b { display: block; font-size: 1rem; margin-bottom: 4px; }
-  .service span { font-size: 0.92rem; color: var(--grey); }
-
-  /* ---------- Articles ---------- */
-  .article { padding: 34px 0; border-bottom: 1px solid var(--line); }
-  .article:last-child { border-bottom: none; padding-bottom: 0; }
-  .article:first-child { padding-top: 0; }
-  .article-meta {
-    font-size: 0.82rem; color: var(--grey); letter-spacing: 0.04em;
-    text-transform: uppercase; margin-bottom: 10px;
-  }
-  .article h3 { font-size: 1.32rem; font-weight: 700; margin-bottom: 16px; max-width: 720px; }
-  .article p { color: var(--grey); max-width: 720px; margin-top: 14px; }
-  .article p:first-of-type { margin-top: 0; }
-
-  /* ---------- Countries ---------- */
-  .countries { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 6px; }
-  .country {
-    border: 1px solid var(--line); padding: 10px 20px; font-size: 0.95rem;
-    border-radius: 2px; background: var(--paper);
-  }
-  .country b { color: var(--ink); }
-
-  /* ---------- Contact ---------- */
-  .contact { background: var(--ink); color: #f0eeeb; }
-  .contact h2 { color: #d98a96; }
-  .contact .lede { color: #fff; }
-  .contact-lines { margin-top: 34px; display: flex; flex-direction: column; gap: 16px; font-size: 1.05rem; }
-  .contact-lines > div { display: flex; align-items: center; gap: 14px; }
-  .contact-lines a { color: #fff; text-decoration: none; border-bottom: 1px solid var(--crimson); padding-bottom: 1px; }
-  .contact-lines a:hover { color: #d98a96; }
-  .contact-lines svg { width: 21px; height: 21px; flex-shrink: 0; color: #d98a96; }
-
-  footer { background: var(--ink); color: #8a8a92; font-size: 0.82rem; padding: 26px 0 40px; border-top: 1px solid #33333a; }
-
-  @media (max-width: 720px) {
-    .numbers .wrap { grid-template-columns: repeat(2, 1fr); }
-    .about-grid { grid-template-columns: 1fr; gap: 32px; }
-    .about-photo { max-width: 380px; }
-    .cards { grid-template-columns: 1fr; }
-    .services { grid-template-columns: 1fr; }
-    .hero { padding: 60px 0 50px; }
-    section { padding: 54px 0; }
-    nav a { margin-left: 14px; }
-  }
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -265,24 +105,22 @@
 <section id="articles">
   <div class="wrap">
     <h2>Notes from the field</h2>
-    <article class="article">
-      <div class="article-meta">July 20, 2026</div>
-      <h3>The EU ban on destroying unsold stock — and what it doesn't fix</h3>
-      <p>As of July 19, large fashion companies in the EU can no longer destroy unsold clothing, footwear and accessories. Under the Ecodesign Regulation, every leftover item needs a documented second life: resale, repair, donation or recycling.</p>
-      <p>Small and mid-sized brands are exempt for now — the obligation reaches them in 2030. But the direction is set, and the real question behind the rule is not disposal. It's why the stock was there in the first place.</p>
-      <p>Unsold inventory is rarely a sales problem. It starts upstream — and it is not the factories' fault: every factory works with the minimums and lead times its setup allows. The problem is the pairing. When a brand's volumes and calendar sit with the wrong production base, buying too deep and too early becomes the only option.</p>
-      <p>In 21 years running sourcing for a brand shipping 20 million pieces a year, I learned that most "waste" is decided months before the season starts — at the table where quantities, suppliers and delivery dates are set.</p>
-      <p>For brands where sourcing has a seat at the table — how much to produce, where, with how much flexibility — this regulation changes nothing. For everyone else, unsold stock stops being a hidden cost and becomes a documented problem.</p>
-    </article>
-    <article class="article">
-      <div class="article-meta">July 16, 2026</div>
-      <h3>The EU–India trade deal is about to change sourcing math</h3>
-      <p>From early 2027, Indian garments will enter the EU duty free. The EU–India trade agreement signed in January removes the 9.6–12% tariff that has kept India out of many European costing sheets for years.</p>
-      <p>For two decades that duty was the silent reason brands defaulted to Bangladesh: same product, and India started the race ten points behind. That gap is about to close.</p>
-      <p>This doesn't mean India suddenly wins on everything. It stays strong where it has always been strong — cotton wovens, shirting, fine-gauge knitwear — and remains less competitive in several of the EU's top garment categories.</p>
-      <p>It does mean that if India is not in your sourcing mix today, the right time to run counter-samples and price comparisons is this season, not when the agreement enters into force. Development takes months, and the duty advantage of your current suppliers now has an expiry date.</p>
-      <p>I've been sourcing from India and the rest of South Asia for 21 years, and this is the biggest shift in the region's playing field since Bangladesh got duty-free access to Europe.</p>
-    </article>
+    <div class="cards article-cards">
+      <a class="card article-card" href="articles/espr-unsold-stock.html">
+        <img src="img/article-espr.png" alt="EU flag over folded garments">
+        <div class="card-body">
+          <div class="article-meta">July 20, 2026</div>
+          <h3>The EU ban on destroying unsold stock — and what it doesn't fix</h3>
+        </div>
+      </a>
+      <a class="card article-card" href="articles/eu-india-fta.html">
+        <img src="img/article-india-fta.png" alt="EU and India trade route illustration">
+        <div class="card-body">
+          <div class="article-meta">July 16, 2026</div>
+          <h3>The EU–India trade deal is about to change sourcing math</h3>
+        </div>
+      </a>
+    </div>
   </div>
 </section>
 
