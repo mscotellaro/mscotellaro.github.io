@@ -118,7 +118,7 @@ h2 {
 .service span { font-size: 0.92rem; color: var(--grey); }
 
 /* ---------- Article cards (index) ---------- */
-.article-cards { grid-template-columns: repeat(2, 1fr); }
+.article-cards { grid-template-columns: repeat(3, 1fr); }
 .card.article-card { text-decoration: none; color: inherit; display: block; transition: border-color 0.15s; }
 .card.article-card:hover { border-color: var(--crimson); }
 .card.article-card img {
