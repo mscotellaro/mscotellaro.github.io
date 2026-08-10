@@ -122,8 +122,8 @@ h2 {
 .card.article-card { text-decoration: none; color: inherit; display: block; transition: border-color 0.15s; }
 .card.article-card:hover { border-color: var(--crimson); }
 .card.article-card img {
-  height: auto; aspect-ratio: 1 / 1; object-fit: contain;
-  background: var(--paper); filter: none;
+  width: 100%; height: 190px; object-fit: cover;
+  background: var(--paper);
 }
 .article-meta {
   font-size: 0.82rem; color: var(--grey); letter-spacing: 0.04em;
