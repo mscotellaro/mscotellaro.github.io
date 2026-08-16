@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mscotellaro.github.io/sitemap.xml
+Sitemap: https://marioscotellaro.com/sitemap.xml
