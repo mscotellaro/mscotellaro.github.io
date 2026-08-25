@@ -149,6 +149,16 @@ h2 {
 .prose a:hover { border-bottom-color: var(--crimson); }
 .article-sources { font-size: 0.88rem; margin-top: 28px; }
 
+.related { margin-top: 48px; padding-top: 28px; border-top: 1px solid var(--line); }
+.related h2 { margin-bottom: 16px; }
+.related ul { list-style: none; }
+.related li { margin-top: 10px; }
+.related a {
+  color: var(--ink); text-decoration: none; font-weight: 600; font-size: 0.98rem;
+  border-bottom: 1px solid transparent;
+}
+.related a:hover { color: var(--crimson); border-bottom-color: var(--crimson); }
+
 /* ---------- Countries ---------- */
 .countries { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 6px; }
 .country {
