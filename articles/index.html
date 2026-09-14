@@ -46,8 +46,8 @@ if (location.hostname === 'mscotellaro.github.io') {
     <h2>Notes from the field</h2>
     <p class="lede">All articles, newest first.</p>
     <div class="cards article-cards" style="margin-top:34px">
-      <a class="card article-card" href="ready-to-show-milano.html">
-        <img src="../img/article-ready-to-show.png" alt="Card: Back on the show floor, on my own this time — Ready to Show Milano, September 2026">
+      <a class="card article-card" href="ready-to-show-milano.html" data-video="../videos/ready-to-show-milano.mp4">
+        <img src="../img/article-ready-to-show.jpg" alt="Photo: crowd watching a runway show at Ready to Show Milano, September 2026">
         <div class="card-body">
           <div class="article-meta">September 14, 2026</div>
           <h3>Back on the show floor. On my own this time.</h3>
@@ -144,6 +144,39 @@ if (location.hostname === 'mscotellaro.github.io') {
 <footer>
   <div class="wrap">Mario Scotellaro — Sourcing &amp; Production Specialist, Knit &amp; Woven. Based in Italy, working across South Asia and Turkey.</div>
 </footer>
+
+<div class="video-lightbox" id="video-lightbox" hidden>
+  <button class="video-lightbox-close" id="video-lightbox-close" aria-label="Close video">&times;</button>
+  <video id="video-lightbox-player" controls playsinline></video>
+</div>
+<script>
+(function () {
+  var lightbox = document.getElementById('video-lightbox');
+  var player = document.getElementById('video-lightbox-player');
+  var closeBtn = document.getElementById('video-lightbox-close');
+  document.querySelectorAll('[data-video]').forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      e.preventDefault();
+      player.src = el.getAttribute('data-video');
+      lightbox.hidden = false;
+      player.play();
+    });
+  });
+  function closeLightbox() {
+    lightbox.hidden = true;
+    player.pause();
+    player.removeAttribute('src');
+    player.load();
+  }
+  closeBtn.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', function (e) {
+    if (e.target === lightbox) closeLightbox();
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !lightbox.hidden) closeLightbox();
+  });
+})();
+</script>
 
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "8f969919fa0b476988417aad6d1c54cb"}'></script><!-- End Cloudflare Web Analytics -->
 </body>

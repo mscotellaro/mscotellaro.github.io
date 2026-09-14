@@ -131,6 +131,25 @@ h2 {
 }
 .card.article-card h3 { font-size: 1.05rem; margin-bottom: 0; }
 
+/* ---------- Video lightbox ---------- */
+.video-lightbox {
+  position: fixed; inset: 0; background: rgba(20,18,17,0.92);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 1000; padding: 40px 20px;
+}
+.video-lightbox[hidden] { display: none; }
+.video-lightbox video {
+  max-width: 420px; width: 100%; max-height: 88vh;
+  border-radius: 4px; display: block;
+}
+.video-lightbox-close {
+  position: absolute; top: 20px; right: 24px;
+  background: none; border: none; color: var(--white);
+  font-size: 2rem; line-height: 1; cursor: pointer; padding: 6px 10px;
+}
+.video-lightbox-close:hover { color: var(--crimson); }
+.card.article-card[data-video] { cursor: pointer; }
+
 /* ---------- Article page (detail) ---------- */
 .article-cover { max-width: 380px; margin: 0 auto 40px; }
 .article-cover img, .article-cover video {
