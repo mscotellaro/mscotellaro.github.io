@@ -131,6 +131,34 @@ h2 {
 }
 .card.article-card h3 { font-size: 1.05rem; margin-bottom: 0; }
 
+/* ---------- Shorts (vertical video cards) ---------- */
+.shorts-row {
+  display: flex; gap: 18px; margin-top: 28px;
+  overflow-x: auto; padding-bottom: 4px;
+}
+.short-card {
+  flex: 0 0 200px; width: 200px; text-decoration: none; color: inherit; cursor: pointer;
+}
+.short-thumb {
+  position: relative; width: 100%; aspect-ratio: 9 / 16;
+  border-radius: 10px; overflow: hidden; background: var(--paper);
+  border: 1px solid var(--line);
+}
+.short-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.short-play {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  width: 46px; height: 46px; border-radius: 50%;
+  background: rgba(20,18,17,0.55); color: var(--white);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.95rem; padding-left: 3px;
+}
+.short-card:hover .short-play { background: var(--crimson); }
+.short-meta {
+  font-size: 0.78rem; color: var(--grey); letter-spacing: 0.04em;
+  text-transform: uppercase; margin-top: 10px;
+}
+.short-card h3 { font-size: 0.95rem; margin-top: 2px; line-height: 1.35; }
+
 /* ---------- Video lightbox ---------- */
 .video-lightbox {
   position: fixed; inset: 0; background: rgba(20,18,17,0.92);
